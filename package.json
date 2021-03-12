@@ -1,0 +1,28 @@
+{
+  "name": "BearBotJS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "run": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "@discordjs/opus": "^0.1.0",
+    "ascii-table": "^0.0.9",
+    "axios": "^0.19.2",
+    "common-tags": "^1.8.0",
+    "cross-fetch": "^3.0.4",
+    "discord.js": "^12.3.1",
+    "ffmpeg-static": "^4.0.1",
+    "fluent-ffmpeg": "^2.1.2",
+    "jimp": "^0.9.5",
+    "lowdb": "^1.0.0",
+    "node-fetch": "^2.6.0",
+    "simple-youtube-api": "^5.2.1",
+    "ytdl-core": "^2.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

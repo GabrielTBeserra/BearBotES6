@@ -1,0 +1,27 @@
+module.exports = {
+  name: "volume",
+  category: "music",
+  description: "Set music volume",
+  run: async (client, message, args, LANGUAGE) => {
+    const serverQueue = message.client.queue.get(message.guild.id);
+
+    if (message.member.id != "237317341359243265") {
+      return;
+    }
+
+    if (!message.member.voice)
+      return message.channel.send(LANGUAGE.MUSIC_VOLUME_CHANNEL);
+
+    if (!serverQueue)
+      return message.channel.send(LANGUAGE.MUSIC_VOLUME_PLAYING);
+
+    if (!args[0])
+      return message.channel.send(
+        LANGUAGE.MUSIC_VOLUME_VOLUME + serverQueue.volume
+      );
+
+    serverQueue.volume = args[0];
+    serverQueue.connection.dispatcher.setVolumeLogarithmic(args[0] / 5);
+    return message.channel.send(LANGUAGE.MUSIC_VOLUME_CHANGE + args[0]);
+  }
+};

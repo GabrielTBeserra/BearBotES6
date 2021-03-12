@@ -1,0 +1,13 @@
+{
+  "597612436064960513": {
+    "prefix": ".",
+    "lang": "en",
+    "notification": "599974065347756050",
+    "commandCnl": null,
+    "music_notification": null,
+    "welcome_message": "DEFAULT_WELCOME_MESSAGE",
+    "notifications": true,
+    "words_enable": false,
+    "banned_words": []
+  }
+}
